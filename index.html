@@ -18,20 +18,20 @@
 	<style>
 		* { padding: 0; margin: 0; }
 		body { background-color: #333; }
-		p { color: rgba(0,0,0,0.5); font-family: "Helvetica","Microsoft YaHei", "微软雅黑"; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
-		h2 { color: rgba(0,0,0,0.5); font-family: "Helvetica","Microsoft YaHei", "微软雅黑"; font-size: 24px; }
+		p  { color: rgba(0,0,0,0.5); font-family: "Helvetica","Microsoft YaHei", "微软雅黑"; font-size: 14px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		h2 { color: rgba(0,0,0,0.5); font-family: "Helvetica","Microsoft YaHei", "微软雅黑"; font-size: 18px; margin-top: 22px; margin-bottom: 10px}
 		h1 { color: rgba(255,255,255,0.85); font-family: "Arial","Helvetica"; font-size: 36px; }
-		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
-		a:hover { color: rgba(255,255,255,255); border-bottom: 1px solid rgba(255,255,255,1); }
+		a  { color: rgba(0,0,0,0.5); font-weight: bold; text-decoration: none; border-bottom: 2px solid rgba(0,0,0,0.5); }
+		a:hover { color: rgba(0,0,0,0.8); border-bottom: 2px solid rgba(0,0,0,0.8); }
 		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-		#about {background-clip:content-box; background-color: rgba(0,0,0,0); width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
+		#about {background-clip:content-box; background-color: rgba(0,0,0,0); width: 580px; padding: 0 0 0 0px; margin: -35px 50px 0 auto !important; }
 		@media (max-width: 767px) {
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
 			background-image { opacity: 0.2; }
 		}
 		.copyright{text-align:center;position:absolute;bottom:0;width:100%;/*footer 的高度 */clear:both;} 
-		.copyright p,a{color: rgba(255,255,255,0.8);}
+		.copyright p,.copyright a{color: rgba(255,255,255,0.8);}
 	</style>
 </head>	
     
@@ -44,9 +44,15 @@
 
 <!-- swap out for information about yourself -->
 <div id="about">
-	<p>陈一发儿，又名陈一发，发姐，段子发，大奶发。斗鱼女主播</p>
-	<h2>视频录像</h2>
-	<h2>个人主页</h2>
+	<p>陈一发儿，又名陈一发，发姐。官方说法，身高 185，为斗鱼第一哥，年龄时而 18，时而 60，18 岁的时候，被痴汉成为发姐，60 岁的时候，被痴汉称为干妈，斗鱼女主播发姐网名陈一发儿，是斗鱼的一名女主播，与电影发哥没有关系，
+因为斗鱼与 a 站的天然联系，偶尔能上 a 站首页，有时因为一些话题，会在电竞或者其他论坛小火一把</p>
+	<h2><a href = "http://www.douyutv.com/chenyifaer">斗鱼直播</a></h2>
+	<p>2014年9月14日开始在斗鱼做主播，没有固定的直播时间，一般从晚上8点到凌晨2点，连播2，3天后必定会休息2，3天。</p>
+	<h2><a href = "http://www.acfun.tv/search/#query=%E9%99%88%E4%B8%80%E5%8F%91%20%E5%8F%91%E5%A7%90">视频录像</a></h2>
+	<p>多位热心的录像师傅会把斗鱼的直播录下来，剪辑后放在AcFun。</p>
+	<h2><a href = "http://weibo.com/thebs">微博主页</a></h2>
+	<h2><a href = "http://snakeball.taobao.com/">淘宝店铺</a></h2>
+	<p></p>
 </div>
 
 <!--include jquery & backstretch-->
@@ -56,7 +62,7 @@
 $(function(){
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("http://www.tu265.com/di-dcbc9d4c5b6258d2976a63cd65d067c1.jpg", {speed: 150});
+             $.backstretch("nh_bg.jpg", {speed: 150});
          }
       })
       .resize();//trigger resize on page load
