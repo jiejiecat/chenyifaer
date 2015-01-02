@@ -31,7 +31,8 @@
 			background-image { opacity: 0.2; }
 		}
 		.copyright{text-align:center;position:absolute;bottom:0;width:100%;/*footer 的高度 */clear:both;} 
-		.copyright p,.copyright a{color: rgba(255,255,255,0.8);}
+		.copyright p,.copyright a{color: rgba(255,255,255,0.6);margin:0px; border-bottom: none;}
+		.copyright a:hover {color: rgba(255,255,255,0.8);}
 	</style>
 </head>	
     
@@ -75,15 +76,15 @@ $(function(){
 });
 </script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-37054944-2', 'auto');
-  ga('send', 'pageview');
-
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d8cb1dc32c63c0ab0ce14b5281128396";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
+
 <div class="copyright">
 <p>© Created by <a href="http://www.jjcat.me">jjcat</a> 2015 with help from <a href="https://github.com/weightshift/The-Personal-Page">The-Personal-Page</a></p>
 </div>
