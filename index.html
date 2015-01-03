@@ -36,6 +36,15 @@
 		#music{float:left ;position:absolute;bottom:0; display:inline; margin: 10px 10px 10px 10px}
 		#music a {text-decoration:none; border-bottom:none}
 	</style>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+  			var hm = document.createElement("script");
+			 hm.src = "//hm.baidu.com/hm.js?d8cb1dc32c63c0ab0ce14b5281128396";
+			 var s = document.getElementsByTagName("script")[0]; 
+			 s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 </head>	
     
 <body>
@@ -92,15 +101,7 @@ function volumeDownOrPause()
 	}
 }
 </script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?d8cb1dc32c63c0ab0ce14b5281128396";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+
 <div id="music" style="text-align: center">
 	<audio autoplay loop src = "Dying in the Sun.mp3"> </audio>
 	<a href="javascript:void(0)" onclick="volumeDownOrPause();" title="Volume" ><img style = "margin-bottom: 0px"id="volume" src="volumeOn.png" alt=""> </a><span style="color: rgba(255,255,255,0.5);vertical-align: middle; line-height: normal;display: inline-block;margin-bottom:15px"><i>dying in the sun</i></span>
