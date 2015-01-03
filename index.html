@@ -24,7 +24,7 @@
 		a  { color: rgba(0,0,0,0.5); font-weight: bold; text-decoration: none; border-bottom: 2px solid rgba(0,0,0,0.5); }
 		a:hover { color: rgba(0,0,0,0.8); border-bottom: 2px solid rgba(0,0,0,0.8); }
 		#monogram { width: 50px; padding: 20px 0 0 0; margin: 0 auto 0 50px; }
-		#about {background-color: rgba(255,255,255,0.5); width: 580px; padding: 20px; margin: 0px 50px 0 auto !important; }
+		#about {background-color: rgba(255,255,255,0.5); width: 480px; padding: 20px; margin: 0px 50px 0 auto !important; }
 		@media (max-width: 767px) {
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
@@ -81,9 +81,10 @@
 <script type="text/javascript" src="jquery.backstretch.min.js"></script>
 <script type="text/javascript">
 $(function(){
+
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("nh_bg.jpg", {speed: 150});
+             $.backstretch("nh_bg.jpg", {centeredX:false,speed: 150});
          }
       })
       .resize();//trigger resize on page load
