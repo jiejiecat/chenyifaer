@@ -1,11 +1,7 @@
 var playlist = [
-{
-"name": "Dying in the Sun.mp3"
-},
-{
-"name": "Never Grow Old.mp3"
-},
-{
-"name": "You and Me.mp3"
-}
+{"name": "dying in the sun.mp3"},
+{"name": "never grow old.mp3"},
+{"name": "you and me.mp3"},
+{"name": "can't take my eyes off you.mp3"},
+{"name": "somewhere only we know.mp3"},
 ]
