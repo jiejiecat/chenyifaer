@@ -117,15 +117,15 @@ function volumeDownOrPause()
 		$("#music a img")[0].src = "volumeOff.png";
 	}
 }
-function getBackgroundMusicName() {
-	var d = new Date();
-	var dayNum = d.getTime();
-	var index  = dayNum % playlist.length;
+function getBackgroundMusicName(seed) {
+	var index  = seed % playlist.length;
 	return playlist[index].name;
 }
 $( document ).ready(function() {
-	$("audio")[0].src = "music/"+getBackgroundMusicName();
-	$("#music i").text(getBackgroundMusicName().replace(".mp3",""));
+	var d = new Date();
+	var seconds = d.getTime();
+	$("audio")[0].src = "music/"+getBackgroundMusicName(seconds);
+	$("#music i").text(getBackgroundMusicName(seconds).replace(".mp3",""));
 });
 
 </script>
