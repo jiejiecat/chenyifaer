@@ -4,4 +4,5 @@ var playlist = [
 {"name": "you and me.mp3"},
 {"name": "can't take my eyes off you.mp3"},
 {"name": "somewhere only we know.mp3"},
+{"name": "true color.mp3"},
 ]
