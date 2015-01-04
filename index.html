@@ -84,11 +84,20 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery.backstretch.min.js"></script>
 <script type="text/javascript">
+var lastWidth = 0;
+var lastHeight = 0;
 $(function(){
-
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("http://7tsz6h.com1.z0.glb.clouddn.com/nh_bg.jpg", {centeredX:false,speed: 150});
+         	 var speedLen = Math.abs(lastWidth - $(this).width()) + Math.abs(lastHeight - $(this).height());
+         	 console.log(speedLen);
+         	 speedLen = Math.min(speedLen, 1000);
+         	 if(speedLen < 50) {
+         	 	speedLen = 0;
+         	 }
+             $.backstretch("http://7tsz6h.com1.z0.glb.clouddn.com/nh_bg.jpg", {centeredX:false,speed: speedLen});
+             lastWidth = $(this).width();
+             lastHeight = $(this).height();
          }
       })
       .resize();//trigger resize on page load
