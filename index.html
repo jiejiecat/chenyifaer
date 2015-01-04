@@ -121,19 +121,23 @@ function getBackgroundMusicName(seed) {
 	var index  = seed % playlist.length;
 	return playlist[index].name;
 }
+var musicSeed = 0;
 $( document ).ready(function() {
 	var d = new Date();
-	var seconds = d.getTime();
-	$("audio")[0].src = "music/"+getBackgroundMusicName(seconds);
-	$("#music i").text(getBackgroundMusicName(seconds).replace(".mp3",""));
+	musicSeed = d.getTime();
+	$("audio")[0].src = "music/"+getBackgroundMusicName(musicSeed);
+	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3",""));
 });
-
+function changeMusic() {
+	$("audio")[0].src = "music/"+getBackgroundMusicName(++musicSeed);
+	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3",""));
+}
 </script>
 
 <div id="footer">
 	<div id="music" style="text-align: center">
 		<audio autoplay loop src = "#"> </audio>
-		<a href="javascript:void(0)" onclick="volumeDownOrPause();" title="Volume" ><img style = "margin-bottom: 0px"id="volume" src="volumeOn.png" alt=""> <span style="text-shadow: 2px 2px 3px rgba(0,0,0,1); color: rgba(255,255,255,0.7);vertical-align: middle; line-height: normal;display: inline-block;margin-top:-17px"><i>dying in the sun</i></span></a>
+		<a href="javascript:void(0)" onclick="volumeDownOrPause();" title="Volume" ><img style = "margin-bottom: 0px"id="volume" src="volumeOn.png" alt=""> </a><a href="javascript:void(0)" onclick="changeMusic()"><span style="text-shadow: 2px 2px 3px rgba(0,0,0,1); color: rgba(255,255,255,0.7);vertical-align: middle; line-height: normal;display: inline-block;margin-top:-17px"><i>dying in the sun</i></span></a>
 	</div>
 	<div class="copyright">
 		<p>© Created by <a href="http://www.jjcat.me">jjcat</a> 2015 with help from <a href="https://github.com/weightshift/The-Personal-Page">The-Personal-Page</a></p>
