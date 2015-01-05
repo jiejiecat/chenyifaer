@@ -99,9 +99,8 @@ var lastWindowHeight = 0;
 var musicSeed = 0;
 $(function(){
      $(window).resize(function(){
-         if($(this).width() >= 767){
+         if($(this).width() >= 0){
          	 var _duration = Math.abs(lastWindowWidth - $(this).width()) + Math.abs(lastWindowHeight - $(this).height());
-         	 console.log(_duration);
          	 _duration = Math.min(_duration, 1000);
          	 if(_duration < 50) {
          	 	_duration = 0;
@@ -111,6 +110,7 @@ $(function(){
 
 	          //    $.backstretch(, {centeredX:false,speed: _duration});
          	 // }
+         	 $.backstretch("resize");
              lastWindowWidth = $(this).width();
              lastWindowHeight = $(this).height();
          }
