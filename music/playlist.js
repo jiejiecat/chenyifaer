@@ -3,6 +3,6 @@ var playlist = [
 {"name": "never grow old.mp3"},
 {"name": "you and me.mp3"},
 {"name": "can't take my eyes off you.mp3"},
-{"name": "somewhere only we know.mp3"},
+{"name": "rattle my bones.mp3"},
 {"name": "true color.mp3"},
 ]
