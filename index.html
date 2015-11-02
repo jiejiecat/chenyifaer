@@ -136,8 +136,9 @@ function getBackgroundMusicName(seed) {
 $( document ).ready(function() {
 	var d = new Date();
 	musicSeed = d.getTime();
-	$("audio")[0].src = "music/"+getBackgroundMusicName(musicSeed);
-	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3",""));
+	$("audio")[0].src = encodeURI("music/chenyifaer/"+getBackgroundMusicName(musicSeed));
+	console.log(encodeURI("music/chenyifaer/"+getBackgroundMusicName(musicSeed)));
+	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3","") + " ~陈一发儿~");
 	// shuffle slider image list
 	var imageList = ["http://7tsz6h.com1.z0.glb.clouddn.com/imgnh_bg1.jpg", 
 	 				"http://7tsz6h.com1.z0.glb.clouddn.com/imgnh_bg2.jpg",
@@ -152,8 +153,8 @@ $( document ).ready(function() {
 });
 
 function changeMusic() {
-	$("audio")[0].src = "music/"+getBackgroundMusicName(++musicSeed);
-	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3",""));
+	$("audio")[0].src = "music/chenyifaer/"+getBackgroundMusicName(++musicSeed);
+	$("#music i").text(getBackgroundMusicName(musicSeed).replace(".mp3","") + " ~陈一发儿~");
 	$.backstretch("next");
 }
 
